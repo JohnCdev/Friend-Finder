@@ -1,4 +1,4 @@
-var friendsData = require("../data/friends");
+const friendsData = require("../data/friends");
 
 module.exports = app => {
 
@@ -8,22 +8,20 @@ module.exports = app => {
 
   app.post("/api/friends", (req, res) => {
     const newFriend = req.body
-    console.log(newFriend)
     let leastDiff = 10000;
     let currentDiff = 0;
     let matchIndex;
-    friendsData.forEach( (e, i) => {
+    friendsData.forEach((e, i) => {
       currentDiff = 0
-      e.scores.forEach( s => {
-        currentDiff += Math.abs(s - (newFriend.scores[i]))
-      })
+      e.scores.forEach((s, j) => {
+        currentDiff += Math.abs(s - (newFriend.scores[j]))
+      });
       if (currentDiff < leastDiff) {
         leastDiff = currentDiff;
         matchIndex = i;
       }
     });
-    res.json({"match": true,"matchName":matchIndex})
+    res.json({ "match": true, "matchName": matchIndex })
   });
-
 
 };

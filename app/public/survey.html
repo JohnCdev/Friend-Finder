@@ -187,7 +187,7 @@
     </div>
 
     <script>
-        $("#submit").on("click", function (event) {
+        $("#submit").on("click", event => {
             event.preventDefault();
             const newFriend = {
                 name: $("#newName").val().trim(),
@@ -207,7 +207,7 @@
             }
 
             $.post("/api/friends", newFriend,
-                function (data) {
+                data => {
                     $("#matchModal").modal("toggle");
                     $("#matchName").text(data.matchName)
                 });
