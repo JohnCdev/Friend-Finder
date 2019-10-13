@@ -208,8 +208,9 @@
 
             $.post("/api/friends", newFriend,
                 data => {
-                    $("#matchModal").modal("toggle");
-                    $("#matchName").text(data.matchName)
+                    $("#matchModal").modal("toggle")
+                    $("#matchName").text(data.name)
+                    $("#matchPhoto").attr("src", data.photo)
                 });
         });
 

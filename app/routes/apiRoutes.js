@@ -21,7 +21,8 @@ module.exports = app => {
         matchIndex = i;
       }
     });
-    res.json({ "match": true, "matchName": matchIndex })
+    // console.log(friendsData[matchIndex])
+    res.json(friendsData[matchIndex])
   });
 
 };
