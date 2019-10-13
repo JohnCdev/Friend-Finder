@@ -192,31 +192,25 @@
             const newFriend = {
                 name: $("#newName").val().trim(),
                 photo: $("#newPhoto").val().trim(),
-                scores: [$("#q1Ans").val(), $("#q2Ans").val(), $("#q3Ans").val(), $("#q4Ans").val(), $("#q5Ans").val(), $("#q6Ans").val(), $("#q7Ans").val(), $("#q8Ans").val(), $("#q9Ans").val(), $("#q10Ans").val()]
+                scores: [$("#q1Ans").val(), $("#q2Ans").val(), $("#q3Ans").val(), $("#q4Ans").val(), $("#q5Ans").val(),
+                $("#q6Ans").val(), $("#q7Ans").val(), $("#q8Ans").val(), $("#q9Ans").val(), $("#q10Ans").val()]
             }
-            let filledOut = true;
-            newFriend.scores.forEach( e => {
-                if (e === null) {
-                    filledOut = false;
-                }
-            })
+
             if (newFriend.name === "" || newFriend.photo === "") {
                 return alert("Please enter a name and photo link.")
-            } else if (!filledOut) {
-                return alert("Please answer all questions.")
             }
-            console.log(newFriend)
+
+            for (e of newFriend.scores) {
+                if (e === null) {
+                    return alert("Please answer all questions.")
+                }
+            }
 
             $.post("/api/friends", newFriend,
                 function (data) {
-                    console.log(data)
-                    if (data.match) {
-                        $("#matchModal").modal("toggle");
-                    } else {
-                        console.log("no match wtf you doing?")
-                    }
+                    $("#matchModal").modal("toggle");
+                    $("#matchName").text(data.matchName)
                 });
-
         });
 
     </script>

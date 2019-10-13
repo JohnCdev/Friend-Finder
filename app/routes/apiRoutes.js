@@ -9,13 +9,20 @@ module.exports = app => {
   app.post("/api/friends", (req, res) => {
     const newFriend = req.body
     console.log(newFriend)
-    // friendsData.forEach( e => {
-    //   e.scores.forEach( s => {
-    //     diff = Math.abs(s - (q1.score))
-    //     //do stuff
-    //   })
-    // });
-    res.json({"match":true})
+    let leastDiff = 10000;
+    let currentDiff = 0;
+    let matchIndex;
+    friendsData.forEach( (e, i) => {
+      currentDiff = 0
+      e.scores.forEach( s => {
+        currentDiff += Math.abs(s - (newFriend.scores[i]))
+      })
+      if (currentDiff < leastDiff) {
+        leastDiff = currentDiff;
+        matchIndex = i;
+      }
+    });
+    res.json({"match": true,"matchName":matchIndex})
   });
 
 
