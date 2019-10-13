@@ -13,6 +13,7 @@
         .title {
             font-weight: bold;
         }
+
         .modal-backdrop {
             opacity: 0.5;
         }
@@ -26,150 +27,130 @@
         <hr>
         <h3 class="title">About You</h3>
         <h4>Name (required)</h4>
-        <input class="form-control" type="text" name="name" required="">
+        <input class="form-control" type="text" name="name" id="newName" required="">
         <h4>Photo Link (required)</h4>
-        <input class="form-control" type="text" name="photo" required>
+        <input class="form-control" type="text" name="photo" id="newPhoto" required>
         <hr>
         <div class="mb-4" id="q1">
             <h3 class="title">Question 1</h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <div id="q1Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q1Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q2">
             <h3 class="title">Question 2</h3>
             <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-            <div id="q2Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q2Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q3">
             <h3 class="title">Question 3</h3>
             <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-            <div id="q3Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q3Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q4">
             <h3 class="title">Question 4</h3>
             <h4>You rarely do something just out of sheer curiosity.</h4>
-            <div id="q4Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q4Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q5">
             <h3 class="title">Question 5</h3>
             <h4>People can rarely upset you.</h4>
-            <div id="q5Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q5Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q6">
             <h3 class="title">Question 6</h3>
             <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-            <div id="q6Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q6Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q7">
             <h3 class="title">Question 7</h3>
             <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-            <div id="q7Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q7Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q8">
             <h3 class="title">Question 8</h3>
             <h4>You rarely get carried away by fantasies and ideas.</h4>
-            <div id="q8Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q8Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q9">
             <h3 class="title">Question 9</h3>
             <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or
                 not.</h4>
-            <div id="q9Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q9Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <div class="mb-4" id="q10">
             <h3 class="title">Question 10</h3>
             <h4>You feel more energetic after spending time with a group of people.</h4>
-            <div id="q10Ans">
-                <select>
-                    <option disabled selected value> -- select an option -- </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+            <select id="q10Ans">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
 
         <button id="submit" type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -198,7 +179,8 @@
         <footer class="footer">
             <div class="container">
                 <p><a href="/api/friends">API Friends List</a> | <a
-                        href="https://github.com/JohnCdev/Friend-Finder">Github Repo</a>
+                        href="https://github.com/JohnCdev/Friend-Finder">Github
+                        Repo</a>
             </div>
         </footer>
 
@@ -207,8 +189,34 @@
     <script>
         $("#submit").on("click", function (event) {
             event.preventDefault();
-            console.log("clicked")
-            $("#matchModal").modal("toggle");
+            const newFriend = {
+                name: $("#newName").val().trim(),
+                photo: $("#newPhoto").val().trim(),
+                scores: [$("#q1Ans").val(), $("#q2Ans").val(), $("#q3Ans").val(), $("#q4Ans").val(), $("#q5Ans").val(), $("#q6Ans").val(), $("#q7Ans").val(), $("#q8Ans").val(), $("#q9Ans").val(), $("#q10Ans").val()]
+            }
+            let filledOut = true;
+            newFriend.scores.forEach( e => {
+                if (e === null) {
+                    filledOut = false;
+                }
+            })
+            if (newFriend.name === "" || newFriend.photo === "") {
+                return alert("Please enter a name and photo link.")
+            } else if (!filledOut) {
+                return alert("Please answer all questions.")
+            }
+            console.log(newFriend)
+
+            $.post("/api/friends", newFriend,
+                function (data) {
+                    console.log(data)
+                    if (data.match) {
+                        $("#matchModal").modal("toggle");
+                    } else {
+                        console.log("no match wtf you doing?")
+                    }
+                });
+
         });
 
     </script>
