@@ -7,7 +7,7 @@ module.exports = app => {
   });
 
   app.post("/api/friends", (req, res) => {
-    const newFriend = req.body
+    const newFriend = req.body;
     let leastDiff = 10000;
     let currentDiff = 0;
     let matchIndex;
@@ -21,6 +21,7 @@ module.exports = app => {
         matchIndex = i;
       }
     });
+    friendsData.push(newFriend);
     // console.log(friendsData[matchIndex])
     res.json(friendsData[matchIndex])
   });
